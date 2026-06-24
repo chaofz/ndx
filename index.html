@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strategy Comparison</title>
+    <meta name="description" content="Interactive Nasdaq-100 (NDX / QQQ) strategy comparison and rolling-window return backtest visualizer. Compare moving averages (200DMA), momentum, trailing stops, and leverage effects (2x, 3x) over 40 years of historical data." />
+    <meta name="keywords" content="Nasdaq 100, NDX, QQQ, backtest, leverage, 200DMA, moving average, investment strategy, rolling returns" />
+    <meta name="author" content="chaofz" />
+    <meta property="og:title" content="Strategy Comparison" />
+    <meta property="og:description" content="Interactive QQQ/NDX strategy backtest comparison tool. Evaluate moving averages, trailing stops, momentum, and leverage effects." />
+    <meta property="og:type" content="website" />
+    <script>
+      try {
+        var theme = localStorage.getItem("ndx-strategy-theme");
+        if (theme === "dark") document.documentElement.dataset.theme = "dark";
+
+        var locale = localStorage.getItem("ndx-strategy-locale");
+        if (locale === "zh") {
+          document.documentElement.lang = "zh-CN";
+          document.title = "策略比较";
+        } else {
+          document.documentElement.lang = "en";
+          document.title = "Strategy Comparison";
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-CoWl38Vr.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-lRjSJO5-.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
