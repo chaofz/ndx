@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <!-- Light Theme Gradients -->
+    <linearGradient id="circleGradLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="trendGradLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#12805c" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Dark Theme Gradients -->
+    <linearGradient id="circleGradDark" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="trendGradDark" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+
+    <style>
+      .circle-path {
+        fill: none;
+        stroke: url(#circleGradLight);
+        stroke-width: 4;
+        stroke-linecap: round;
+      }
+      .trend-path {
+        fill: none;
+        stroke: url(#trendGradLight);
+        stroke-width: 4;
+        stroke-linecap: round;
+      }
+      @media (prefers-color-scheme: dark) {
+        .circle-path {
+          stroke: url(#circleGradDark);
+        }
+        .trend-path {
+          stroke: url(#trendGradDark);
+        }
+      }
+    </style>
+  </defs>
+  
+  <!-- 3/4 Circle centered at (14, 16) with radius 8 -->
+  <!-- Sweeps clockwise from (22, 16) to (14, 8) leaving a top-right gap -->
+  <path d="M 22 16 A 8 8 0 1 1 14 8" class="circle-path" />
+  
+  <!-- Diagonal Trend Line shooting out through the top-right gap -->
+  <path d="M 9 21 L 25 5" class="trend-path" />
+</svg>
